@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>だれか PANTRY/login</title>
+        <link rel="stylesheet" href="login-page.css">
+        <script src="login-page.js" defer></script>
+        <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    </head>
+<body class="flexStyleColumn">
+    <main class="container opacity" id="container">
+        <!-- header -->
+        <section class="header flexStyleSpaceBetween borderBackground">
+            <div class="subHeaderOne flexStyleEvenly">
+                <h1>だれか PANTRY</h1>
+                <p class="linkHover">Donate</p>
+                <p class="linkHover">About Us</p>
+                <p class="linkHover">Latest News</p>
+            </div>
+            <div class="subHeaderTwo flexStyleEvenly">
+                <p class="linkHover" id="login">Login</p>
+                <p class="linkHover" id="createAccount">Create Account</p>
+            </div>
+        </section>
+
+        <!-- time date weather -->
+        <section class="timeDateWeather flexStyleSpaceBetween">
+            <div class="timeDate flexStyleColumn">
+                <div id="dayDisplay"></div>
+                <div id="dateDisplay"></div>
+                <div id="timeDisplay"></div>
+            </div>
+            <div class="weather flexStyleEvenly">
+                <h1 class="title" id="city">Pasig City</h1>
+                <div class="flexStyleColumn">
+                    <p id="temperature">Temperature outside is 31.78°</p>
+                    <p id="tempMinMax">(30.84° - 33.23°)</p>
+                    <p id="weatherDes">few clouds</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- forecast -->
+        <main class="forecastCon flexStyleSpaceBetween">
+            <div class="flexStyleColumn forecastSub">
+                <h1 class="city">MANILA</h1>
+                <p id="manila"></p>
+            </div>
+            <div class="flexStyleColumn forecastSub">
+                <h1 class="city">QUEZON</h1>
+                <p id="quezon"></p>
+            </div>
+            <div class="flexStyleColumn forecastSub">
+                <h1 class="city">PASIG</h1>
+                <p id="pasig"></p>
+            </div>
+            <div class="flexStyleColumn forecastSub">
+                <h1 class="city">MAKATI</h1>
+                <p id="makati"></p>
+            </div>
+            <div class="flexStyleColumn forecastSub">
+                <h1 class="city">PASAY</h1>
+                <p id="pasay"></p>
+            </div>
+        </main>
+
+        <!-- what we do -->
+        <section class="whatWeDo flexStyleColumn borderBackground">            
+            <h2>WHAT WE DO..</h2><br>
+            <p><span class="bold">だれか PANTRY (For-Anyone-Pantry)</span> is an organized community pantry that helps out<br>
+                with the distribution of food products to those who are in need.<br>
+                <br>These goods are not our own but, from kind-hearted individuals and organizations<br>
+                who wants to extend a helping hand but don't know where to start.</p>
+        </section>
+
+        <!-- testimonials -->
+        <section class="testimonials flexStyleColumn">
+            <h2>Testimonials</h2>
+            <div class="feedbackCon flexStyleSpaceBetween">
+                <div class="feedback flexStyleRow">
+                    <p>It feels good to be part of change!<br>
+                        - <span class="bold">Clark Kent</span></p>
+                </div>
+                <div class="feedback flexStyleRow">
+                    <p>だれか PANTRY kept me posted on<br>
+                        my donations. Really great!<br>
+                        - <span class="bold">Bruce Wayne</span></p>
+                </div>
+                <div class="feedback flexStyleRow">
+                    <p>The lines weren't that long so we<br>
+                        helped out a lot of people.<br>
+                        - <span class="bold">Barry Allen</span></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- last section -->
+        <section class="lastSection flexStyleSpaceBetween">
+            <!-- contact us -->
+            <form class="contactUs flexStyleColumn">
+                <h2>Want to donate? Feel free to contact us!</h2>
+                <div class="flexStyleRow adjust">
+                    <div class="logoCon flexStyleRow">
+                        <img src="images/contact/phone.png" alt="phone" width="50%" height="65%">
+                    </div>
+                    <p class="contactFont">Phone: +63 949 992 9973</p>
+                </div>
+                <div class="flexStyleRow">
+                    <div class="logoCon flexStyleRow">
+                        <img src="images/contact/email.png" alt="email" width="50%" height="55%">
+                    </div>
+                    <p class="contactFont">Email: anyone_pantry@gmail.com</p>
+                </div>
+            </form>
+
+            <!-- social media -->
+            <section class="socialMedia flexStyleSpaceBetween">
+                <h2>Our Social Media</h2>
+                <div class="icons flexStyleEvenly">
+                    <div class="logoCon flexStyleRow">
+                        <img src="images/social-media/facebook.png" alt="facebook" height="90%" width="100%">
+                    </div>
+                    <div class="logoCon flexStyleRow">
+                        <img src="images/social-media/twitter.png" alt="twitter" height="70%" width="90%">
+                    </div>   
+                    <div class="logoCon flexStyleRow">
+                        <img src="images/social-media/instagram.jpg" alt="instagram" height="80%" width="60%" >
+                    </div>
+                </div>
+            </section>
+        </section>
+
+        <!-- footer -->
+        <section class="footer flexStyleColumn">
+            <h1>ありがとうございました</h1>
+            <h2>Thank you!</h2>
+        </section>
+    </main>
+
+    <!-- login popup -->
+    <div class="popup hidden" id="loginPopup">
+        <h1>だれか PANTRY</h1>
+        <div class="error hidden" id="error">Error: Username/password mismatch.</div>
+        <input id="username" type="text" placeholder="username">
+        <input id="password" type="text" placeholder="password">
+        <button id="loginButton" type="submit">LOGIN</button>
+        <p class="changePopup linkHover" id="createAccountLink">Don't have an account? Create one now.</p>
+        <p id="closeLoginPopup">&#10006;</p>
+        <div class="apple">
+            <img src="images/design/apple.png" alt="apple" height="100%" width="100%">
+        </div>
+    </div>
+
+    <!-- create account popup -->
+    <div class="popup hidden" id="createAccountPopup">
+        <h1>だれか PANTRY</h1>
+        <input id="newUsername" type="text" placeholder="new username">
+        <input id="newEmail" type="email" placeholder="email address">
+        <input id="newPassword" type="text" placeholder="new password">
+        <button id="createButton" type="submit">CREATE</button>
+        <p class="changePopup linkHover" id="loginLink">Already have an account? Sign in here.</p>
+        <p id="closeCreateAccountPopup">&#10006;</p>
+        <div class="broccoli">
+            <img src="images/design/broccoli.png" alt="broccoli" height="100%" width="100%">
+        </div>
+    </div>
+
+    <!-- branch popup -->
+    <div class="enterBranchPopup flexStyleEvenly" id="enterBranchPopup">
+        <h2>ENTER BRANCH LOCATION</h2>
+        <div class="enterBranchSub flexStyleEvenly">
+            <input type="text" placeholder="enter city" id="inputValue">
+            <button id="checkWeatherButton">SELECT</button>
+        </div>
+        <div class="carrot">
+            <img src="images/design/carrot.png" alt="carrot" height="100%" width="100%">
+        </div>
+    </div>
+
+    <!-- background design -->
+    <div class="groceryOne opacity" id="groceryOne">
+        <img src="images/design/grocery-one.png" alt="groceryOne" height="100%" width="100%">
+    </div>
+    <div class="groceryTwo opacity" id="groceryTwo">
+        <img src="images/design/grocery-two.png" alt="groceryTwo" height="100%" width="100%">
+    </div>
+    <div class="groceryThree opacity" id="groceryThree">
+        <img src="images/design/grocery-three.png" alt="groceryThree" height="100%" width="100%">
+    </div>
+    <div class="groceryFour opacity" id="groceryFour">
+        <img src="images/design/grocery-four.png" alt="groceryFour" height="100%" width="100%">
+    </div>
+    <div class="groceryFive opacity" id="groceryFive">
+        <img src="images/design/grocery-five.png" alt="groceryFive" height="100%" width="100%">
+    </div>
+    <div class="grocerySix opacity" id="grocerySix">
+        <img src="images/design/grocery-six.png" alt="grocerySix" height="100%" width="100%">
+    </div>
+</body>
+</html>

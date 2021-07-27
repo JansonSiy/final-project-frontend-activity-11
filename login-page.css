@@ -1,0 +1,388 @@
+/* general styles */
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    cursor: pointer;
+}
+
+button {
+    height: 35px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: white;
+    border: 2.5px solid black;
+    font-size: 15px;
+    font-weight: bold;
+}
+button:hover {
+    border-color: #FFFF66;
+}
+
+input {
+    height: 30px;
+    width: 150px;
+    border: 2.5px solid black;
+    border-radius: 10px;
+    padding-left: 15px;
+    font-weight: bold;
+    outline: none;
+}
+input:hover {
+    border-color: #FFFF66;
+}
+
+::placeholder { 
+    color: black;
+}
+
+/* styling */
+.flexStyleRow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexStyleColumn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexStyleEvenly {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.flexStyleSpaceBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.borderBackground {
+    background-color: #FFFF66;
+    border: 3px solid #FFFF66;
+}
+
+.linkHover:hover {
+    color: #A9A9A9;
+}
+
+.opacity {
+    opacity: 0.5;
+}
+
+/* body */
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+/* header */
+.header {
+    height: 80px;
+    width: 80%;
+    padding: 0px 20px 0px 20px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    font-weight: bold;
+}
+
+.subHeaderOne {
+    height: 50px;
+    width: 500px;
+}
+
+.subHeaderTwo {
+    height: 40px;
+    width: 250px;
+}
+
+/* time date weather */
+.timeDateWeather {
+    height: 250px;
+    width: 700px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.timeDate {
+    height: 100%;
+    width: 40%;
+}
+
+#dayDisplay {
+    font-size: 40px;
+    margin-right: 130px;
+}
+
+#dateDisplay {
+    font-size: 30px;
+    margin: 5px 0px 10px 55px;
+}
+
+#timeDisplay {
+    font-size: 35px;
+    margin-right: 36px;
+}
+
+.weather {
+    flex-direction: column;
+    height: 70%;
+    width: 50%;
+}
+
+.title {
+    font-size: 40px;
+}
+
+/* forecast */
+.forecastCon {
+    height: 100px;
+    width: 620px;
+}
+
+.forecastSub {
+    height: 95%;
+    width: 100px;
+    border: 3px solid #FFFF66;
+    border-radius: 50px;
+    transition: transform 1s;
+}
+.forecastSub:hover {
+    transform: rotateZ(360deg);
+}
+
+.city {
+    font-size: 20px;
+}
+
+/* what we do */
+.whatWeDo {
+    height: 280px;
+    width: 680px;
+    margin-top: 30px;
+    border-radius: 25px;
+    text-align: center;
+}
+.whatWeDo:hover {
+    background-color: black;
+    border: 3px solid black;
+    color: #FFFF66;
+}
+
+/* testimonials */
+.testimonials {
+    height: 150px;
+    width: 1000px;
+    margin-top: 30px;
+}
+
+.feedbackCon {
+    height: 100px;
+    width: 90%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.feedback {
+    height: 100%;
+    width: 280px;
+    border: 3px solid #FFFF66;
+    border-radius: 25px;
+}
+.feedback:hover {
+    background-color: black;
+    border: 3px solid black;
+    color: #FFFF66;
+}
+
+/* last section */
+.lastSection {
+    width: 1000px;
+    margin: 50px 0px 30px 0px;
+}
+
+/* contact us */
+.contactUs {
+    flex-direction: column;
+    height: 120px;
+    width: 500px;
+    border-radius: 25px;
+}
+
+.adjust {
+    margin-right: 45px;
+}
+
+.contactFont {
+    font-size: 15px;
+}
+
+/* social media */
+.socialMedia {
+    height: 100px;
+    width: 380px;
+}
+
+.icons {
+    height: 50px;
+    width: 180px;
+}
+
+.logoCon {
+    height: 45px;
+    width: 60px;
+}
+
+/* footer */
+.footer {
+    height: 130px;
+    width: 100%;
+    background-color: #FFFF66;
+}
+.footer:hover {
+    background-color: black;
+    color: #FFFF66;
+}
+
+/* popup */
+.hidden {
+    visibility: hidden;
+}
+
+.enterBranchPopup {
+    flex-direction: column;
+    height: 150px;
+    width: 400px;
+    position: absolute;
+    margin: 0px 0px 720px 0px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.enterBranchSub {
+    width: 70%;
+}
+
+.popup {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 350px;
+    width: 350px;
+    position: absolute;
+    margin: 0px 0px 650px 0px;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.changePopup {
+    font-size: 15px;
+}
+.changePopup:hover {
+    text-decoration: underline;
+}
+
+#closeLoginPopup:hover {
+    color: grey;
+}
+
+#closeCreateAccountPopup:hover {
+    color: grey;
+}
+
+.error {
+    color: red;
+    position: absolute;
+    margin: 190px 0px 0px 0px;
+}
+
+/* background design */
+.groceryOne {
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    margin: 0px 1050px 600px 0px;
+    transform: rotate(-40deg);
+}
+
+.groceryTwo {
+    height: 280px;
+    width: 280px;
+    position: absolute;
+    margin: 0px 0px 550px 1100px;
+    transform: rotate(40deg);
+}
+
+.groceryThree {
+    height: 170px;
+    width: 170px;
+    position: absolute;
+    margin: 0px 0px 0px 900px;
+    transform: rotate(-30deg);
+}
+
+.groceryFour {
+    height: 190px;
+    width: 190px;
+    position: absolute;
+    margin: 0px 1000px 0px 0px;
+    transform: rotate(50deg);
+}
+
+.groceryFive {
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    margin: 880px 900px 0px 0px;
+    transform: rotate(0deg);
+}
+
+.grocerySix {
+    height: 150px;
+    width: 150px;
+    position: absolute;
+    margin: 450px 0px 0px 1100px;
+    transform: rotate(30deg);
+}
+
+.apple {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    margin: 280px 0px 0px 280px;
+    transform: rotate(-30deg);
+}
+
+.broccoli {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    margin: 290px 0px 0px 280px;
+    transform: rotate(30deg);
+}
+
+.carrot {
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    margin: 80px 0px 0px 340px;
+    transform: rotate(0deg);
+}

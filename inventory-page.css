@@ -1,0 +1,413 @@
+/* general styles */
+label, input, button {
+    font-weight: bold;
+}
+label, input {
+    margin-bottom: 12px;
+}
+input, button {
+    border: 2.5px solid black;
+}
+label, button {
+    font-size: 15px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    cursor: pointer;
+}
+input {
+    height: 20px;
+    width: 120px;
+    border-radius: 5px;
+    padding-left: 10px;
+    outline: none;
+    }
+input:hover {
+    border-color: #FFFF66;
+}
+::placeholder { 
+    color: black;
+}
+button {
+    height: 30px;
+    width: 70px;
+    border-radius: 10px;
+    background-color: white;
+}
+button:hover {
+    border-color: black;
+    background-color: black;
+    color: #FFFF66;
+}
+.linkHover:hover {
+    color: #A9A9A9;
+}
+
+/* tables */
+table {
+    border-collapse: collapse;
+    /* to remove extra spaces */    
+    text-align: center;
+    margin: 20px 0px 20px 0px;
+}
+table thead tr {
+    background-color: #FFFF66;
+}
+table th, table td {
+    padding: 8px;
+}
+table tbody tr:nth-of-type(even){
+    background-color:#FFFFCC;
+    border-bottom: none;
+}
+tbody tr:hover {
+    color: #A9A9A9;
+}
+
+.tableCon {
+    height: 480px;
+}
+.tableLong {
+    min-width: 800px;
+}
+.tableShort {
+    min-width: 400px;
+}
+
+/* hide and opacity */
+.hidden {
+    visibility: hidden;
+}
+.opacity {
+    opacity: 0.5;
+}
+
+/* flex styling */
+.flexCenCol, .flexStrtCol {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.flexCenCol {
+    align-items: center;
+}
+.flexStrtCol {
+    align-items: flex-start;
+}
+
+/* display head */
+.disHeadOne, .disHeadTwo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.disHeadOne {
+    justify-content: center;
+}
+.disHeadTwo {
+    justify-content: space-evenly;
+}
+.displayTitle {
+    height: 30px;
+    width: 400px;
+    border: 3px solid #FFFF66;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    background-color: #FFFF66;
+    text-align: center;
+}
+
+/* popups */
+.popupCon, .popupConTwo, .popupConTwoSub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.popupCon, .popupConTwo {
+    flex-direction: column;
+    position: absolute;
+    margin: 180px 0px 0px 0px;
+    background-color: white;
+    border: 2.9px solid black;
+    border-radius: 25px;
+}
+.popupHeader, .popupFooter {
+    padding: 5px 0px 5px 0px;
+    text-align: center;
+    font-weight: bold;
+}
+.popupHeader, .popupFooter:hover {
+    background-color: #FFFF66;
+    color: black;
+}
+
+.popupCon {
+    height: 350px;
+    width: 330px;
+}
+.popupConTwo {
+    height: 220px;
+    width: 400px;
+}
+.popupConTwoSub {
+    width: 230px;
+}
+.popupHeader {
+    width: 80%;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    font-size: 16px;
+}
+.popupFooter {
+    width: 20%;
+    background-color: black;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;    
+    color: #FFFF66;
+    font-size: 12px;
+}
+
+
+/* body */
+.container, .header, .subHeader, .dashboard, .sideBar, .functionsCon, .footer {
+    display: flex;
+    align-items: center;
+}
+.container, .sideBar {
+    justify-content: flex-start;
+}
+.dashboard, .footer {
+    justify-content: center;
+}
+.subHeader, .functionsCon {
+    justify-content: space-evenly;
+}
+.container, .sideBar, .functionsCon, .footer {
+    flex-direction: column;
+}
+.container, .sideBar, .display {
+    height: 100%;
+}
+.container, .footer {
+    width: 100%;
+}
+.header, .functions {
+    border-bottom: 3px solid #FFFF66;
+}
+.header, .footer {
+    background-color: #FFFF66;
+}
+.header, .sideBar {
+    font-weight: bold;
+}
+
+.header {
+    justify-content: space-between;
+    height: 80px;
+    width: 70%;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding: 0px 0px 0px 50px;
+}
+.subHeader {
+    height: 20px;
+    width: 350px;
+}
+.dashboard {
+    height: 550px;
+    width: 85%;
+    margin: 20px 0px 20px 0px;
+}
+.sideBar {
+    width: 20%;
+    margin-top: 50px;
+    text-align: center;
+}
+.functions {
+    width: 150px;
+    border-bottom: 3px solid #FFFF66;
+    margin-top: 30px;
+    padding: 5px;
+}
+.display {
+    width: 80%;
+}
+.footer {
+    height: 130px;
+}
+.footer:hover {
+    color: #FFFF66;
+    background-color: black;
+}
+
+/* inventory manager */
+.inventoryCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+}
+.reminder {
+    font-style: italic;
+}
+
+/* store */
+.storeOptions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* store product */
+.storeProdForm, .storeProdFormCon {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.storeProdForm {
+    flex-direction: column;
+    justify-content: center;
+}
+.storeProdFormCon {
+    justify-content: space-evenly;
+}
+
+/* cash deposit */
+.cashDepForm, .cashDepFormCon {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.cashDepForm {
+    flex-direction: column;
+    justify-content: center;
+}
+.cashDepFormCon {
+    justify-content: space-evenly;
+    height: 110px;
+}
+.convertedAmount {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* donate */
+.donateForm, .donateFormCon {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.donateForm {
+    flex-direction: column;
+    height: 190px;
+    width: 100%;
+}
+.donateFormCon {
+    width: 85%;
+}
+
+/* transaction history */
+.transHisCon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 550px;
+    width: 853px;
+    position: absolute;
+    margin: 105px 0px 0px 213px;
+    background: white;
+}
+
+/* location & donor list */
+.listCon, .listBody, .donorList, .locationList {
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+.listCon, .donorList, .locationList {
+    flex-direction: column;
+}
+.listCon, .listBody {
+    justify-content: space-between;
+}
+.donorList, .locationList {
+    justify-content: flex-start;
+    height: 100%;
+    width: 50%;
+}
+
+.listCon {
+    height: 550px;
+    width: 853px;
+    position: absolute;
+    margin: 105px 0px 0px 220px;
+}
+.listBody {
+    height: 90%;
+    width: 100%;
+}
+
+/* background design */
+.groceryOne, .groceryTwo, .groceryThree, .groceryFour, .groceryFive {
+    height: 60px;
+    width: 70px;
+}
+.groceryOne, .groceryTwo, .groceryThree, .groceryFour, .groceryFive, .grocerySix {
+    position: absolute;
+    margin-right: 250px;
+}
+.groceryOne, .groceryThree, .groceryFive {
+    transform: rotate(30deg);
+}
+.groceryTwo, .groceryFour, .grocerySix {
+    transform: rotate(-30deg);
+}
+
+.groceryOne {
+    margin-bottom: 370px;
+}
+.groceryTwo {
+    margin-bottom: 230px;
+}
+.groceryThree {
+    margin-bottom: 90px;
+}
+.groceryFour {
+    margin-bottom: -90px;
+}
+.groceryFive {
+    margin-bottom: -250px;
+}
+.grocerySix {
+    height: 68px;
+    width: 78px;
+    margin-bottom: -410px;
+}
+
+.apple, .mango, .grapes, .orange, .carrot, .potato {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    transform: rotate(15deg);
+}
+.apple, .mango, .grapes, .orange {
+    margin: 290px 0px 0px 265px;
+}
+.carrot, .potato {
+    margin: 165px 0px 0px 330px;
+}
