@@ -201,7 +201,7 @@ class Create {
         let tableBodyInventory = document.getElementById('tableBodyInventory');
         let donated = 0;
         
-        //template literals
+        // template literals
             // ` translates the value literally to the HTML
             // ${} placeholder to display values of variables
         let rowTemplateInventory = 
@@ -461,7 +461,7 @@ addLocationButton.addEventListener('click', function() {
     donorLocationDetails.storeLocationDetails();
 });
 
-//logout function
+// logout function
 let logout = document.getElementById('logout');
 
 logout.addEventListener('click', function() {
