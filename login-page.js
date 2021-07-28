@@ -1,4 +1,4 @@
-// onload clock
+// onload clock & API
 window.onload = realTime();
 window.onload = manilaWeather();
 window.onload = quezonWeather();
@@ -28,7 +28,7 @@ function realTime() {
     peroid;
 
     setTimeout(realTime, 500);
-    //1000 = 1 sec;
+    // 1000 = 1 sec;
 
     let day = dateTime.getDay();
     let month = dateTime.getMonth();
@@ -60,7 +60,7 @@ function realTime() {
         "SATURDAY"
     ];
 
-    //month will serve as an index for monthList
+    // month will serve as an index for monthList
     let updatedMonth = monthList[month];
     let updatedDay = dayList[day];
     
@@ -85,12 +85,9 @@ let city = document.getElementById('city');
 let temperature = document.getElementById('temperature');
 let tempMinMax = document.getElementById('tempMinMax');
 let weatherDes = document.getElementById('weatherDes');
-// let icon = document.getElementById('icon');
 
 checkWeatherButton.addEventListener('click', function(name) {
     fetch('https://api.openweathermap.org/data/2.5/weather?q='+inputValue.value+'&units=metric&appid=e9fda0468ea526972a52690dd74ea091')
-    // fetch('https://api.openweathermap.org/data/2.5/weather?q=Pasig&units=metric&appid=e9fda0468ea526972a52690dd74ea091')
-    // if you want to focus on onload Pasig
     .then(response => response.json())
     .then(data => {
     let cityValue = data['name'];
@@ -98,14 +95,11 @@ checkWeatherButton.addEventListener('click', function(name) {
     let minTempValue = data['main']['temp_min'];
     let maxTempValue = data['main']['temp_max'];
     let weatherDesValue = data['weather'][0]['description'];
-    // let iconData = data['weather'][0]['icon'];
-    // let iconValue = 'http://openweathermap.org/img/wn/iconData.png';
 
     city.innerHTML = cityValue;
     temperature.innerHTML = "temperature outside is " + tempValue + "&#176";
     tempMinMax.innerHTML = "(" + minTempValue + "&#176" + " - " + maxTempValue + "&#176" + ")";
     weatherDes.innerHTML = weatherDesValue;
-    // weatherDes.innerHTML = weatherDesValue + iconValue;
 
     let enterBranchPopup = document.getElementById('enterBranchPopup');
     enterBranchPopup.classList.add('hidden');
@@ -133,10 +127,10 @@ checkWeatherButton.addEventListener('click', function(name) {
 // weather display pop up
 function manilaWeather() {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=manila&units=metric&appid=e9fda0468ea526972a52690dd74ea091`)
-    //request
+    // request
 
     .then(Response=>Response.json())
-    //promise response - await
+    // promise response - await
 
     .then(data => {
         let windSpeed = data['wind']['speed'];
@@ -149,7 +143,7 @@ function manilaWeather() {
         } else {
             document.getElementById('manila').innerHTML = "&#10060;";
         };
-    })
+    });
 };
 
 function quezonWeather() {
@@ -168,7 +162,7 @@ function quezonWeather() {
         } else {
             document.getElementById('quezon').innerHTML = "&#10060;";
         };
-    })
+    });
 };
 
 function pasigWeather() {
@@ -187,7 +181,7 @@ function pasigWeather() {
         } else {
             document.getElementById('pasig').innerHTML = "&#10060;";
         };
-    })
+    });
 };
 
 function makatiWeather() {
@@ -206,7 +200,7 @@ function makatiWeather() {
         } else {
             document.getElementById('makati').innerHTML = "&#10060;";
         };
-    })
+    });
 };
 
 function pasayWeather() {
@@ -225,10 +219,10 @@ function pasayWeather() {
         } else {
             document.getElementById('pasay').innerHTML = "&#10060;";
         };
-    })
+    });
 };
 
-//login and create accout popups
+// login and create accout popups
 let loginPopup = document.getElementById('loginPopup');
 let createAccountPopup = document.getElementById('createAccountPopup');
 
@@ -281,7 +275,7 @@ class User {
         this.newEmail = tempNewEmail;
         this.newPassword = tempNewPassword;
     }
-    //can't catch duplicated yet
+    // can't catch duplicated yet
     createUser() {
         let userObject = {
             username: this.newUsername,
@@ -297,15 +291,15 @@ class User {
         };
 
         let userList = JSON.parse(localStorage.getItem('users'));
-        //if there's no data yet in localstorage, create an empty arr[]=userList and add the 'userObject' inside
-        //if there is, just push the new 'userObject' inside the arr[]=userList
+        // if there's no data yet in localstorage, create an empty arr[]=userList and add the 'userObject' inside
+        // if there is, just push the new 'userObject' inside the arr[]=userList
         if (!userList) {
             userList = [userObject];
         } else {
             userList.push(userObject);
         };
             console.log(userList);
-            //always check if userList-arr[] is updated
+            // always check if userList-arr[] is updated
 
         localStorage.setItem('users', JSON.stringify(userList));
         
